@@ -49,9 +49,9 @@ header {
 .nav-links a {
   text-decoration: none;
   padding: 0.6rem 1rem;
-  border: 2px solid white;
+  border: 2px solid rgb(255, 255, 255);
   border-radius: 30px;
-  color: white;
+  color: #ffffff;
   transition: 0.3s;
 }
 
@@ -253,7 +253,7 @@ footer {
 @media (min-width: 768px) {
 
   .nav-links {
-    display: flex !important;
+    display: flex;
     position: static;
     flex-direction: row;
     background: transparent;
