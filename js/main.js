@@ -65,7 +65,7 @@ function openModal(type) {
     },
     bonus: {
       title: "Surprise Bonus Item",
-      text: "A fun seasonal gardening surprise included just for you, thoughtfully selected to add a little extra joy to your growing experience. Each surprise is inspired by the time of year, whether it’s a packet of specialty seeds, a limited-edition plant marker, a small gardening accessory, or a bonus care tip tailored to the season."
+      text: "A fun seasonal gardening surprise included just for you, thoughtfully selected to add a little extra joy to your growing experience. Each surprise is inspired by the time of year, whether it’s a packet of specialty seeds, a limited-edition plant marker, a small gardening accessory, or a bonus gardening tool tailored to the season."
     }
   };
 
