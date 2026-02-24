@@ -45,27 +45,27 @@ function openModal(type) {
   const content = {
     plant: {
       title: "Starter Plant",
-      text: "A healthy beginner-friendly plant selected for easy growth and success."
+      text: "A healthy beginner-friendly plant selected for easy growth and success. It comes in a simple packet made easy to tear and includes about ten pellets of seed for an abundance vegetation."
     },
     soil: {
       title: "Premium Soil Mix",
-      text: "Nutrient-rich, well-draining soil designed to support strong root development."
+      text: "Nutrient-rich, well-draining soil designed to support strong root development. It is about ten pounds of premium, professionally blended soil formulated to give plants the ideal balance of moisture retention and aeration. Perfect for indoor and outdoor container plants, raised beds, or transplanting young seedlings."
     },
     food: {
       title: "Organic Plant Food",
-      text: "All-natural fertilizer that boosts plant growth without harmful chemicals."
+      text: "All-natural fertilizer that boosts plant growth without harmful chemicals. Made from organic, sustainably sourced ingredients, it delivers essential nutrients like nitrogen, phosphorus, and potassium in a slow-release form that feeds plants steadily over time."
     },
     guide: {
       title: "Detailed Care Guide",
-      text: "Step-by-step instructions to help you care for your plant with confidence."
+      text: "Step-by-step instructions to help you care for your plant with confidence. You will also find practical tips for pruning, repotting, and recognizing early signs of stress or nutrient deficiencies—so you can address small issues before they become bigger problems."
     },
     reminder: {
       title: "Reminder Schedule",
-      text: "A simple watering and maintenance tracker to keep your plant thriving."
+      text: "A simple watering and maintenance tracker to keep your plant thriving, designed to help you stay consistent and organized with your care routine. This easy-to-use system allows you to log watering dates, fertilizing schedules, pruning sessions, and any notable changes in your plant’s appearance."
     },
     bonus: {
       title: "Surprise Bonus Item",
-      text: "A fun seasonal gardening surprise included just for you!"
+      text: "A fun seasonal gardening surprise included just for you, thoughtfully selected to add a little extra joy to your growing experience. Each surprise is inspired by the time of year, whether it’s a packet of specialty seeds, a limited-edition plant marker, a small gardening accessory, or a bonus care tip tailored to the season."
     }
   };
 
