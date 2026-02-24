@@ -28,8 +28,9 @@ header {
 
 .logo {
   font-weight: bold;
-  font-size: 1.3rem;
+  font-size: 2rem;
   color: #ffffff;
+  font-family: "Rubik Iso", system-ui;
 }
 
 /* NAV BUTTON STYLE */
@@ -83,6 +84,14 @@ header {
 }
 .hamburger.active span:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
+}
+
+p {
+    font-family: "Gamja Flower", sans-serif;
+}
+
+.todo-section span{
+    font-family: "Gamja Flower", sans-serif;
 }
 
 /* HERO */
@@ -243,10 +252,14 @@ input:invalid {
 
 /* FOOTER */
 footer {
-  background: hsl(86, 30%, 46%);
+  background: #7a9852;
   text-align: center;
   padding: 1rem;
-  color: Zwhite;
+  color: #ffffff;
+}
+
+.footer p{ 
+    font-family: "Rubik Iso", system-ui;
 }
 
 /* TABLET+ */
@@ -293,11 +306,16 @@ footer {
   background: #ffffff;
   padding: 2rem;
   border-radius: 20px;
-  max-width: 400px;
+  max-width: 550px;
   width: 90%;
   text-align: center;
   position: relative;
   animation: fadeIn 0.3s ease;
+}
+
+.modal-content p{
+  font-size: 1.5rem;
+  margin-top: 10px; 
 }
 
 .close-btn {
@@ -326,3 +344,4 @@ footer {
   font-size: 1rem;
   cursor: pointer;
 }
+

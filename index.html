@@ -127,14 +127,6 @@
       <li>
         <label>
           <input type="checkbox" onchange="toggleStrike(this)">
-          <span>Repot tomato plant</span>
-        </label>
-        <button onclick="deleteTask(this)" class="delete-btn">✕</button>
-      </li>
-
-      <li>
-        <label>
-          <input type="checkbox" onchange="toggleStrike(this)">
           <span>Apply organic fertilizer</span>
         </label>
         <button onclick="deleteTask(this)" class="delete-btn">✕</button>
@@ -190,18 +182,11 @@
       <label for="category">Choose Your Plant Category</label>
       <select id="category" required>
         <option value="">Select </option>
-        <option>Fruits (ex: Orange, Apple, Lemon)</option>
-        <option>Plants (ex: Snake Plant, Pothos, Monstera)</option>
-        <option>Flowers (ex: Roses, Tulips, Sunflowers)</option>
+        <option>Fruit Kit (ex: Apple, Orange, Lemon)</option>
+        <option>Plant Kit (ex: Snake Plant, Pothos, Monstera)</option>
+        <option>Flower Kit (ex: Roses, Hydrangeas, Sunflowers)</option>
+        <option>Randomized Kit (ex: One of the above)</option>
       </select>
-
-      <div class="subscription-options">
-        <p>Select Your Kit:</p>
-        <label><input type="checkbox"> Fruit Kit</label>
-        <label><input type="checkbox"> Plant Kit</label>
-        <label><input type="checkbox"> Flower Kit</label>
-        <label><input type="checkbox"> Randomized Kit</label>
-      </div>
 
       <button type="submit" class="submit-btn">Subscribe Now</button>
 
@@ -210,8 +195,8 @@
 </section>
 </main>
 
-<footer>
-  <p>©The Willow Patch Starter Kit</p>
+<footer class="footer">
+  <p>The Willow Patch Starter Kit</p>
 </footer>
 
 </body>
