@@ -322,7 +322,7 @@ footer {
 .delete-btn {
   background: transparent;
   border: none;
-  color: rgb(80, 6, 6);
+  color: #a60303;
   font-size: 1rem;
   cursor: pointer;
 }
