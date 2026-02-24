@@ -58,14 +58,23 @@
 <section id="box" class="box-section">
   <h2>What's Inside Your Plant Kit?</h2>
   <div class="box-grid">
-    <div class="box-card">Starter Plant</div>
-    <div class="box-card">Premium Soil Mix</div>
-    <div class="box-card">Organic Plant Food</div>
-    <div class="box-card">Detailed Care Guide</div>
-    <div class="box-card">Reminder Schedule</div>
-    <div class="box-card">Surprise Bonus Item</div>
+    <div class="box-card" onclick="openModal('plant')">Starter Plant</div>
+    <div class="box-card" onclick="openModal('soil')">Premium Soil Mix</div>
+    <div class="box-card" onclick="openModal('food')">Organic Plant Food</div>
+    <div class="box-card" onclick="openModal('guide')">Detailed Care Guide</div>
+    <div class="box-card" onclick="openModal('reminder')">Reminder Schedule</div>
+    <div class="box-card" onclick="openModal('bonus')">Surprise Bonus Item</div>
   </div>
 </section>
+
+<!-- POPUP MODAL -->
+<div id="itemModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h3 id="modalTitle"></h3>
+    <p id="modalDescription"></p>
+  </div>
+</div>
 
 <section class="reminder-layout">
   <div class="reminder-image">
@@ -82,17 +91,88 @@
     </div>
 
     <ul id="taskList">
-      <li><label><input type="checkbox"> Water sunflower pot</label></li>
-      <li><label><input type="checkbox"> Check for worms in tomato plant </label></li>
-      <li><label><input type="checkbox"> Check soil moisture</label></li>
-      <li><label><input type="checkbox"> Remove dead leaves</label></li>
-      <li><label><input type="checkbox"> Repot tomato plant</label></li>
-      <li><label><input type="checkbox"> Apply organic fertilizer</label></li>
-      <li><label><input type="checkbox"> Pull out emerging weeds</label></li>
-      <li><label><input type="checkbox"> Run to the store for plant labels</label></li>
-      <li><label><input type="checkbox"> Prune dead stems</label></li>
-      <li><label><input type="checkbox"> Fill up watering can</label></li>
-    </ul>
+      <ul id="taskList">
+
+  <li>
+    <label>
+      <input type="checkbox" onchange="toggleStrike(this)">
+      <span>Water sunflower pot</span>
+    </label>
+    <button onclick="deleteTask(this)" class="delete-btn">✕</button>
+  </li>
+
+  <li>
+    <label>
+      <input type="checkbox" onchange="toggleStrike(this)">
+      <span>Check for worms in tomato plant</span>
+    </label>
+    <button onclick="deleteTask(this)" class="delete-btn">✕</button>
+  </li>
+
+  <li>
+    <label>
+      <input type="checkbox" onchange="toggleStrike(this)">
+      <span>Check soil moisture</span>
+    </label>
+    <button onclick="deleteTask(this)" class="delete-btn">✕</button>
+  </li>
+
+  <li>
+    <label>
+      <input type="checkbox" onchange="toggleStrike(this)">
+      <span>Remove dead leaves</span>
+    </label>
+    <button onclick="deleteTask(this)" class="delete-btn">✕</button>
+  </li>
+
+  <li>
+    <label>
+      <input type="checkbox" onchange="toggleStrike(this)">
+      <span>Repot tomato plant</span>
+    </label>
+    <button onclick="deleteTask(this)" class="delete-btn">✕</button>
+  </li>
+
+  <li>
+    <label>
+      <input type="checkbox" onchange="toggleStrike(this)">
+      <span>Apply organic fertilizer</span>
+    </label>
+    <button onclick="deleteTask(this)" class="delete-btn">✕</button>
+  </li>
+
+  <li>
+    <label>
+      <input type="checkbox" onchange="toggleStrike(this)">
+      <span>Pull out emerging weeds</span>
+    </label>
+    <button onclick="deleteTask(this)" class="delete-btn">✕</button>
+  </li>
+
+  <li>
+    <label>
+      <input type="checkbox" onchange="toggleStrike(this)">
+      <span>Run to the store for plant labels</span>
+    </label>
+    <button onclick="deleteTask(this)" class="delete-btn">✕</button>
+  </li>
+
+  <li>
+    <label>
+      <input type="checkbox" onchange="toggleStrike(this)">
+      <span>Prune dead stems</span>
+    </label>
+    <button onclick="deleteTask(this)" class="delete-btn">✕</button>
+  </li>
+
+  <li>
+    <label>
+      <input type="checkbox" onchange="toggleStrike(this)">
+      <span>Fill up watering can</span>
+    </label>
+    <button onclick="deleteTask(this)" class="delete-btn">✕</button>
+  </li>
+</ul>
   </div>
 </section>
 
