@@ -29,14 +29,6 @@ function addTask() {
   input.value = "";
 }
 
-// Form Validation
-document.getElementById("plantForm").addEventListener("submit", function(e) {
-  if (!this.checkValidity()) {
-    e.preventDefault();
-    alert("Please fill out required fields correctly.");
-  }
-});
-
 // MODAL CONTENT
 function openModal(type) {
   const modal = document.getElementById("itemModal");
@@ -97,4 +89,48 @@ function toggleStrike(checkbox) {
   } else {
     text.classList.remove("completed");
   }
+}; 
+
+const form = document.getElementById("plantForm");
+const successModal = document.getElementById("successModal");
+
+form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const category = document.getElementById("category").value;
+
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@(gmail\.com|outlook\.com|yahoo\.com|icloud\.com)$/;
+
+    if (name === "") {
+        alert("Please enter your full name.");
+        return;
+    }
+
+    if (!emailPattern.test(email)) {
+        alert("Please enter a valid email (Gmail, Outlook, Yahoo, or iCloud).");
+        return;
+    }
+
+    if (category === "") {
+        alert("Please select a plant package.");
+        return;
+    }
+
+    // Show success modal instead of alert
+    successModal.style.display = "flex";
+
+    form.reset();
+});
+
+function closeSuccessModal() {
+    successModal.style.display = "none";
 }
+
+// Optional: close modal when clicking outside of it
+window.addEventListener("click", function(e) {
+    if (e.target === successModal) {
+        successModal.style.display = "none";
+    }
+});
