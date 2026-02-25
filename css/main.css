@@ -343,3 +343,19 @@ footer {
   cursor: pointer;
 }
 
+/* Smooth Strike Effect */
+#taskList span {
+  transition: all 0.3s ease;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+/* Fade Out Animation */
+.fade-out {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: all 0.3s ease;
+}

@@ -45,11 +45,11 @@ function openModal(type) {
   const content = {
     plant: {
       title: "Starter Plant",
-      text: "A healthy beginner-friendly plant selected for easy growth and success. It comes in a simple packet made easy to tear and includes about ten pellets of seed for an abundance vegetation."
+      text: "A healthy beginner-friendly plant selected for easy growth and success. It comes in a simple packet made easy to tear and includes about ten pellets of seed for an abundance of vegetation."
     },
     soil: {
       title: "Premium Soil Mix",
-      text: "Nutrient-rich, well-draining soil designed to support strong root development. It is about ten pounds of premium, professionally blended soil formulated to give plants the ideal balance of moisture retention and aeration. Perfect for indoor and outdoor container plants, raised beds, or transplanting young seedlings."
+      text: "Nutrient-rich, well-draining soil designed to support strong root development. It is about fifteen pounds of premium, professionally blended soil formulated to give plants the ideal balance of moisture retention and aeration. Perfect for indoor and outdoor container plants, raised beds, or transplanting young seedlings."
     },
     food: {
       title: "Organic Plant Food",
@@ -80,11 +80,20 @@ function closeModal() {
 }
 
 function deleteTask(button) {
-  button.parentElement.remove();
+  const li = button.parentElement;
+  li.classList.add("fade-out");
+
+  setTimeout(() => {
+    li.remove();
+  }, 300); // matches CSS animation time
 }
 
 function toggleStrike(checkbox) {
   const text = checkbox.nextElementSibling;
-  text.style.textDecoration =
-    checkbox.checked ? "line-through" : "none";
+
+  if (checkbox.checked) {
+    text.classList.add("completed");
+  } else {
+    text.classList.remove("completed");
+  }
 }
