@@ -36,6 +36,7 @@ document.getElementById("plantForm").addEventListener("submit", function(e) {
     alert("Please fill out required fields correctly.");
   }
 });
+
 // MODAL CONTENT
 function openModal(type) {
   const modal = document.getElementById("itemModal");
