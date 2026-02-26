@@ -116,7 +116,7 @@ p {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(187, 163, 96, 0.47); /* adjust darkness here */
+  background: rgba(0, 0, 0, 0.614); /* adjust darkness here */
   z-index: 1;
 }
 
@@ -305,9 +305,9 @@ footer {
   
 }
 
-.footer p{ 
+.foot { 
   font-family: "Rubik Iso", system-ui;
-  font-size: 18px; 
+  font-size: 25px; 
   font-weight: bold; 
 }
 
