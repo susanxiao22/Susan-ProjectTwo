@@ -474,6 +474,9 @@ footer {
   display: flex;
   justify-content: center;
   text-align: center;
+  margin-top: 60px; 
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
 .mission-content {
