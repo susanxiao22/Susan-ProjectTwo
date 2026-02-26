@@ -259,6 +259,8 @@ input:invalid {
   font-weight: bold;
 }
 
+
+
 .submit-btn:hover {
   transform: translateY(-3px);
 }
@@ -340,6 +342,10 @@ footer {
   top: 10px;
   font-size: 1.5rem;
   cursor: pointer;
+}
+
+.third-heading {
+  font-size: 1.5rem; 
 }
 
 @keyframes fadeIn {
