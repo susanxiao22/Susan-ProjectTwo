@@ -384,6 +384,18 @@ footer {
   to {opacity: 1; transform: scale(1);}
 }
 
+/* MISSION FADE-IN */
+.mission-section {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.mission-section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 #taskList li {
   display: flex;
   justify-content: space-between;
@@ -414,3 +426,30 @@ footer {
   transform: translateX(20px);
   transition: all 0.3s ease;
 }
+
+/* MISSION SECTION */
+.mission-section {
+  background: #ece69d;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.mission-content {
+  max-width: 800px;
+}
+
+.mission-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.mission-content p {
+  margin-bottom: 1.2rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+

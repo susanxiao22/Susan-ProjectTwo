@@ -134,3 +134,18 @@ window.addEventListener("click", function(e) {
         successModal.style.display = "none";
     }
 });
+
+// Fade-in on scroll for Mission Section
+const missionSection = document.querySelector(".mission-section");
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      missionSection.classList.add("show");
+    }
+  });
+}, {
+  threshold: 0.2
+});
+
+observer.observe(missionSection);
