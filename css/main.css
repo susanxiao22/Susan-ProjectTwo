@@ -494,3 +494,25 @@ footer {
   line-height: 1.6;
 }
 
+/* Keep gallery title fixed above scrolling images */
+.plant-gallery {
+  position: relative; /* keeps title positioned inside gallery box */
+  max-width: 500px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  border-radius: 20px;
+  padding-top: 2.5rem; /* space for title */
+}
+
+.gallery-title {
+  position: sticky;      /* <-- key: keeps it in place while scrolling */
+  top: 0 auto;           /* distance from top of gallery box */
+  left: 0 auto;          /* optional padding from left */
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #243c2c;
+  z-index: 5;            /* stay above images */
+  background: #f7f4d5;   /* match gallery background for better readability */
+  margin-bottom: 20px; 
+}
