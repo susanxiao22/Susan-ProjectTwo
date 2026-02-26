@@ -274,6 +274,7 @@ footer {
 .footer p{ 
   font-family: "Rubik Iso", system-ui;
   font-size: 1.5rem; 
+  font-weight: bold; 
 }
 
 /* TABLET+ */
