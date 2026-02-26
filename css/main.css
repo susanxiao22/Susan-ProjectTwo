@@ -123,6 +123,12 @@ p {
   transform: translateY(-3px);
 }
 
+.cta-btn:active {
+  background: #b85c1c;   /* darker orange when pressed */
+  transform: scale(0.97);
+  color: #ffffff;        /* keeps text readable */
+}
+
 /* BOX */
 .box-section {
   padding: 3rem 2rem;
