@@ -109,6 +109,7 @@ p {
   border-radius: 30px;
   text-decoration: none;
   transition: 0.3s;
+  font-weight: bold; 
 }
 
 .cta-btn:hover {
