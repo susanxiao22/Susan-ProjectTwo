@@ -96,9 +96,26 @@ p {
 
 /* HERO */
 .hero {
-  background: #ece69d;
+  position: relative;
+  background-image: url("../img/PlantsHero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
   text-align: center;
-  padding: 4rem 2rem;
+  padding: 6rem 2rem;
+  color: white;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* dark overlay */
+}
+
+.hero * {
+  position: relative;
 }
 
 .herohead {
@@ -257,6 +274,7 @@ input:invalid {
   cursor: pointer;
   transition: 0.3s;
   font-weight: bold;
+  font-size: 1.3rem; 
 }
 
 
@@ -276,7 +294,7 @@ footer {
 
 .footer p{ 
   font-family: "Rubik Iso", system-ui;
-  font-size: 15px; 
+  font-size: 18px; 
   font-weight: bold; 
 }
 
