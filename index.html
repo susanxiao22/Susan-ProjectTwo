@@ -28,200 +28,219 @@ lang="en">
 </head>
 
 <body>
-  <!-- HEADER -->
-  <header>
-    <div class="logo">The Willow Patch</div>
+  <!-- Place your site's HTML here -->
+<header>
+  <div class="logo">The Willow Patch</div>
 
-    <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 
-    <nav>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#top">Home</a></li>
-        <li><a href="#box">What's Included</a></li>
-        <li><a href="#contact">Subscription</a></li>
-      </ul>
-    </nav>
-  </header>
+  <nav>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#top">Home</a></li>
+      <li><a href="#box">What's Included</a></li>
+      <li><a href="#contact">Subscription</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <main id="top">
-    <!-- HERO SECTION -->
-    <section class="hero">
-      <h1 class="herohead">Grow With Confidence.</h1>
-      <p class="lineone">Beautiful fruit trees, flowers, and indoor plants delivered monthly.</p>
-      <a href="#contact" class="cta-btn">Start My Plant Journey</a>
-    </section>
+<main id="top">
 
-    <!-- MISSION STATEMENT SECTION -->
-    <section class="mission-section">
-      <div class="mission-content">
-        <h2>Our Mission at The Willow Patch</h2>
-        <p>We believe anyone can grow something beautiful.</p>
-        <p>
-          Whether you're a seasoned plant lover or just beginning your gardening journey, 
-          our thoughtfully curated plant kits are designed to make growing simple, 
-          enjoyable, and rewarding. Each month, we deliver high-quality seeds, nutrient-rich soil, organic plant food, 
-          and step-by-step guidance straight to your door. Our goal is to remove the guesswork 
-          from gardening and replace it with confidence, calm, and connection to nature.
-        </p>
-        <p>We’re not just sending plants, we’re helping you cultivate growth, 
-          patience, and a greener lifestyle.</p>
-      </div>
-    </section>
+<section class="hero">
+  <h1 class="herohead">Grow With Confidence.</h1>
+  <p class="lineone">Beautiful fruit trees, flowers, and indoor plants delivered monthly.</p>
+  <a href="#contact" class="cta-btn">Start My Plant Journey</a>
+</section>
 
-    <!-- BOX SECTION -->
-    <section id="box" class="box-section">
-      <h2>What's Inside Your Plant Kit?</h2>
-      <div class="box-grid">
-        <div class="box-card" onclick="openModal('plant')">Starter Plant</div>
-        <div class="box-card" onclick="openModal('soil')">Premium Soil Mix</div>
-        <div class="box-card" onclick="openModal('food')">Organic Plant Food</div>
-        <div class="box-card" onclick="openModal('guide')">Detailed Care Guide</div>
-        <div class="box-card" onclick="openModal('reminder')">Reminder Schedule</div>
-        <div class="box-card" onclick="openModal('bonus')">Surprise Bonus Item</div>
-      </div>
-    </section>
+<section id="box" class="box-section">
+<section class="mission-section">
+  <div class="mission-content">
+    <h2>Our Mission at The Willow Patch</h2>
+    <p>
+      We believe anyone can grow something beautiful. 
+    </p>
+    
+    <p>
+      Whether you're a seasoned plant lover or just beginning your gardening journey, 
+      our thoughtfully curated plant kits are designed to make growing simple, 
+      enjoyable, and rewarding. Each month, we deliver high-quality seeds, nutrient-rich soil, organic plant food, 
+      and step-by-step guidance straight to your door. Our goal is to remove the guesswork 
+      from gardening and replace it with confidence, calm, and connection to nature.
+    </p>
 
-    <!-- REMINDER + HORIZONTAL GALLERY SECTION -->
-    <section class="reminder-layout">
-      <!-- HORIZONTAL SCROLLING IMAGE GALLERY -->
-      <div class="plant-gallery">
-        <div class="gallery-track">
-          <img src="img/appletree.jpg" alt="">
-          <img src="img/orangetree.jpg" alt="">
-          <img src="img/lemontree.avif" alt="">
-          <img src="img/snake-plant.jpg" alt="">
-          <img src="img/porthos.avif" alt="">
-          <img src="img/plantcareforbeginners26-7bd20a625c3149849e683e547dd2fcc6.jpeg" alt="">
-          <img src="img/roses.jpg" alt="">
-          <img src="img/hydrangea.jpg" alt="">
-          <img src="img/sunflower.jpeg" alt="">
-        </div>
-      </div>
+    <p>
+      We’re not just sending plants, we’re helping you cultivate growth, 
+      patience, and a greener lifestyle.
+    </p>
+  </div>
+</section>
 
-      <!-- DAILY CHECKLIST -->
-      <div class="todo-section">
-        <h3>Daily Plant Checklist</h3>
-        <div class="todo-container">
-          <input type="text" id="taskInput" placeholder="Add a plant task...">
-          <button onclick="addTask()">Add</button>
-        </div>
-        <ul id="taskList">
-          <li>
-            <label>
-              <input type="checkbox" onchange="toggleStrike(this)">
-              <span>Water sunflower pot</span>
-            </label>
-            <button onclick="deleteTask(this)" class="delete-btn">✕</button>
-          </li>
-          <li>
-            <label>
-              <input type="checkbox" onchange="toggleStrike(this)">
-              <span>Check for worms in tomato plant</span>
-            </label>
-            <button onclick="deleteTask(this)" class="delete-btn">✕</button>
-          </li>
-          <li>
-            <label>
-              <input type="checkbox" onchange="toggleStrike(this)">
-              <span>Check soil moisture</span>
-            </label>
-            <button onclick="deleteTask(this)" class="delete-btn">✕</button>
-          </li>
-          <li>
-            <label>
-              <input type="checkbox" onchange="toggleStrike(this)">
-              <span>Remove dead leaves</span>
-            </label>
-            <button onclick="deleteTask(this)" class="delete-btn">✕</button>
-          </li>
-          <li>
-            <label>
-              <input type="checkbox" onchange="toggleStrike(this)">
-              <span>Apply organic fertilizer</span>
-            </label>
-            <button onclick="deleteTask(this)" class="delete-btn">✕</button>
-          </li>
-          <li>
-            <label>
-              <input type="checkbox" onchange="toggleStrike(this)">
-              <span>Pull out emerging weeds</span>
-            </label>
-            <button onclick="deleteTask(this)" class="delete-btn">✕</button>
-          </li>
-          <li>
-            <label>
-              <input type="checkbox" onchange="toggleStrike(this)">
-              <span>Run to the store for plant labels</span>
-            </label>
-            <button onclick="deleteTask(this)" class="delete-btn">✕</button>
-          </li>
-          <li>
-            <label>
-              <input type="checkbox" onchange="toggleStrike(this)">
-              <span>Prune dead stems</span>
-            </label>
-            <button onclick="deleteTask(this)" class="delete-btn">✕</button>
-          </li>
-          <li>
-            <label>
-              <input type="checkbox" onchange="toggleStrike(this)">
-              <span>Fill up watering can</span>
-            </label>
-            <button onclick="deleteTask(this)" class="delete-btn">✕</button>
-          </li>
-        </ul>
-      </div>
-    </section>
+<section id="box" class="box-section">
+  <h2>What's Inside Your Plant Kit?</h2>
+  <div class="box-grid">
+    <div class="box-card" onclick="openModal('plant')">Starter Plant</div>
+    <div class="box-card" onclick="openModal('soil')">Premium Soil Mix</div>
+    <div class="box-card" onclick="openModal('food')">Organic Plant Food</div>
+    <div class="box-card" onclick="openModal('guide')">Detailed Care Guide</div>
+    <div class="box-card" onclick="openModal('reminder')">Reminder Schedule</div>
+    <div class="box-card" onclick="openModal('bonus')">Surprise Bonus Item</div>
+  </div>
+</section>
 
-    <!-- SUBSCRIPTION FORM -->
-    <section id="contact" class="contact">
-      <div class="form-wrapper">
-        <h2>Start Your Plant Journey</h2>
-        <form id="plantForm">
-          <label for="name">Full Name</label>
-          <input type="text" id="name" required>
-          <label for="email">Email Address</label>
-          <input type="email" id="email" required>
-          <label for="category">Choose Your Plant Package</label>
-          <select id="category" required>
-            <option value="">Select </option>
-            <option>Fruit Kit (ex: Apple, Orange, Lemon)</option>
-            <option>Plant Kit (ex: Snake Plant, Pothos, Monstera)</option>
-            <option>Flower Kit (ex: Roses, Hydrangeas, Sunflowers)</option>
-            <option>Randomized Kit (ex: One of the above)</option>
-          </select>
-          <button type="submit" class="submit-btn">Subscribe Now</button>
-        </form>
-      </div>
-    </section>
-  </main>
+<!-- POPUP MODAL -->
+<div id="itemModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h3 id="modalTitle"></h3>
+    <p id="modalDescription"></p>
+  </div>
+</div>
 
-  <!-- MODALS -->
-  <div id="itemModal" class="modal">
-    <div class="modal-content">
-      <span class="close-btn" onclick="closeModal()">&times;</span>
-      <h3 id="modalTitle"></h3>
-      <p id="modalDescription"></p>
+<section class="reminder-layout">
+
+  <div class="plant-gallery">
+    <div class="gallery-track">
+      <img src="img/appletree.jpg" alt="">
+      <img src="img/orangetree.jpg" alt="">
+      <img src="img/lemontree.avif" alt="">
+      <img src="img/snake-plant.jpg" alt="">
+      <img src="img/porthos.avif" alt="">
+      <img src="img/plantcareforbeginners26-7bd20a625c3149849e683e547dd2fcc6.jpeg" alt="">
+      <img src="img/roses.jpg" alt="">
+      <img src="img/hydrangea.jpg" alt="">
+      <img src="img/sunflower.jpeg" alt="">
     </div>
   </div>
 
-  <div id="successModal" class="modal">
-    <div class="modal-content">
-      <span class="close-btn" onclick="closeSuccessModal()">&times;</span>
-      <h3 class="third-heading">Thank You for Subscribing!</h3>
-      <p>Welcome to The Willow Patch. Your plant journey begins now!</p>
+  <div class="todo-section">
+    <h3>Daily Plant Checklist</h3>
+
+    <div class="todo-container">
+      <input type="text" id="taskInput" placeholder="Add a plant task...">
+      <button onclick="addTask()">Add</button>
     </div>
+
+    <ul id="taskList">
+      <li>
+        <label>
+          <input type="checkbox" onchange="toggleStrike(this)">
+          <span>Water sunflower pot</span>
+        </label>
+        <button onclick="deleteTask(this)" class="delete-btn">✕</button>
+      </li>
+
+      <li>
+        <label>
+          <input type="checkbox" onchange="toggleStrike(this)">
+          <span>Check for worms in tomato plant</span>
+        </label>
+        <button onclick="deleteTask(this)" class="delete-btn">✕</button>
+      </li>
+
+      <li>
+        <label>
+          <input type="checkbox" onchange="toggleStrike(this)">
+          <span>Check soil moisture</span>
+        </label>
+        <button onclick="deleteTask(this)" class="delete-btn">✕</button>
+      </li>
+
+      <li>
+        <label>
+          <input type="checkbox" onchange="toggleStrike(this)">
+          <span>Remove dead leaves</span>
+        </label>
+        <button onclick="deleteTask(this)" class="delete-btn">✕</button>
+      </li>
+
+      <li>
+        <label>
+          <input type="checkbox" onchange="toggleStrike(this)">
+          <span>Apply organic fertilizer</span>
+        </label>
+        <button onclick="deleteTask(this)" class="delete-btn">✕</button>
+      </li>
+
+      <li>
+        <label>
+          <input type="checkbox" onchange="toggleStrike(this)">
+          <span>Pull out emerging weeds</span>
+        </label>
+        <button onclick="deleteTask(this)" class="delete-btn">✕</button>
+      </li>
+
+      <li>
+        <label>
+          <input type="checkbox" onchange="toggleStrike(this)">
+          <span>Run to the store for plant labels</span>
+        </label>
+        <button onclick="deleteTask(this)" class="delete-btn">✕</button>
+      </li>
+
+      <li>
+        <label>
+          <input type="checkbox" onchange="toggleStrike(this)">
+          <span>Prune dead stems</span>
+        </label>
+        <button onclick="deleteTask(this)" class="delete-btn">✕</button>
+      </li>
+
+      <li>
+        <label>
+          <input type="checkbox" onchange="toggleStrike(this)">
+          <span>Fill up watering can</span>
+        </label>
+        <button onclick="deleteTask(this)" class="delete-btn">✕</button>
+      </li>
+    </ul>
   </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <h3 class="foot">The Willow Patch Starter Kit</h3>
-  </footer>
+<section id="contact" class="contact">
+  <div class="form-wrapper">
+    <h2>Start Your Plant Journey</h2>
 
-  <script src="js/main.js"></script>
+    <form id="plantForm">
+
+      <label for="name">Full Name</label>
+      <input type="text" id="name" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" required>
+
+      <label for="category">Choose Your Plant Package</label>
+      <select id="category" required>
+        <option value="">Select </option>
+        <option>Fruit Kit (ex: Apple, Orange, Lemon)</option>
+        <option>Plant Kit (ex: Snake Plant, Pothos, Monstera)</option>
+        <option>Flower Kit (ex: Roses, Hydrangeas, Sunflowers)</option>
+        <option>Randomized Kit (ex: One of the above)</option>
+      </select>
+
+      <button type="submit" class="submit-btn">Subscribe Now</button>
+
+    </form>
+  </div>  
+</section>
+</main>
+
+<!-- SUBSCRIPTION SUCCESS MODAL -->
+<div id="successModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeSuccessModal()">&times;</span>
+    <h3 class="third-heading">Thank You for Subscribing!</h3>
+    <p>Welcome to The Willow Patch. Your plant journey begins now!</p>
+  </div>
+</div>
+
+<footer class="footer">
+  <h3 class="foot">The Willow Patch Starter Kit</h3>
+</footer>
+
+<script src="js/main.js"></script>
+
 </body>
 </html>
