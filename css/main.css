@@ -268,10 +268,12 @@ footer {
   text-align: center;
   padding: 1rem;
   color: #ffffff;
+  
 }
 
 .footer p{ 
-    font-family: "Rubik Iso", system-ui;
+  font-family: "Rubik Iso", system-ui;
+  font-size: 1.5rem; 
 }
 
 /* TABLET+ */
