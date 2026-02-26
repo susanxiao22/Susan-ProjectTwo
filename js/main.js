@@ -149,3 +149,27 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 observer.observe(missionSection);
+// Get modal elements
+const galleryModal = document.getElementById("itemModal");
+const galleryModalTitle = document.getElementById("modalTitle");
+const galleryModalDescription = document.getElementById("modalDescription");
+
+// Select all gallery images
+const galleryImages = document.querySelectorAll(".gallery-track img");
+
+galleryImages.forEach(img => {
+  img.addEventListener("click", () => {
+    const title = img.getAttribute("data-title");
+    const description = img.getAttribute("data-description");
+    
+    galleryModalTitle.textContent = title;
+    galleryModalDescription.textContent = description;
+
+    galleryModal.style.display = "flex";
+  });
+});
+
+// Close modal (existing function)
+function closeModal() {
+  galleryModal.style.display = "none";
+}
