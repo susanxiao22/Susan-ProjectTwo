@@ -188,7 +188,45 @@ p {
   flex-direction: column;
   align-items: center;
   padding: 3rem 1rem;
-  gap: 5rem;
+  gap: 3rem;
+}
+
+/* HORIZONTAL SCROLL GALLERY */
+.plant-gallery {
+  flex: 1;
+  max-width: 500px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  border-radius: 20px;
+}
+
+/* Hide scrollbar (optional clean look) */
+.plant-gallery::-webkit-scrollbar {
+  height: 8px;
+}
+
+.plant-gallery::-webkit-scrollbar-thumb {
+  background: #F48E3A;
+  border-radius: 10px;
+}
+
+.gallery-track {
+  display: flex;
+  gap: 1rem;
+}
+
+.gallery-track img {
+  height: 250px;
+  width: auto;
+  border-radius: 15px;
+  flex-shrink: 0;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-track img:hover {
+  transform: scale(1.05);
 }
 
 .reminder-image img {
@@ -200,7 +238,7 @@ p {
   background: #ffffff;
   padding: 1.5rem;
   border-radius: 20px;
-  width: 150%;
+  flex: 1;
   max-width: 350px;
   box-shadow: 0 8px 20px #0000001a;
 }
