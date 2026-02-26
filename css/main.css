@@ -109,7 +109,7 @@ p {
   display: inline-block;
   margin-top: 1rem;
   padding: 0.8rem 1.5rem;
-  background: #f47b18;
+  background: #e86e0a;
   color: #ffffff;
   border-radius: 30px;
   text-decoration: none;
@@ -250,12 +250,13 @@ input:invalid {
 
 .submit-btn {
   padding: 0.9rem;
-  background: #F48E3A;
+  background: #e86e0a;
   color: white;
   border: none;
   border-radius: 30px;
   cursor: pointer;
   transition: 0.3s;
+  font-weight: bold;
 }
 
 .submit-btn:hover {
@@ -273,7 +274,7 @@ footer {
 
 .footer p{ 
   font-family: "Rubik Iso", system-ui;
-  font-size: 1.5rem; 
+  font-size: 20px; 
   font-weight: bold; 
 }
 
