@@ -33,6 +33,10 @@ header {
   font-family: "Rubik Iso", system-ui;
 }
 
+.lineone {
+  font-size: 1.5rem; 
+}
+
 /* NAV BUTTON STYLE */
 .nav-links {
   list-style: none;
@@ -104,14 +108,22 @@ p {
 
   text-align: center;
   padding: 6rem 2rem;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4); /* dark overlay */
+  background: rgba(0, 0, 0, 0.5); /* adjust darkness here */
+  z-index: 1;
+}
+
+.hero h1,
+.hero p,
+.hero a {
+  position: relative;
+  z-index: 2;
 }
 
 .hero * {
