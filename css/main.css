@@ -16,6 +16,11 @@ body {
   color: #243c2c;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 /* HEADER */
 header {
   background: #799851;
@@ -445,6 +450,13 @@ footer {
 }
 
 /* MISSION FADE-IN */
+
+/* MISSION FADE-IN EFFECT */
+.mission-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
 
 .mission-section.show {
   opacity: 1;
