@@ -19,7 +19,7 @@ body {
 /* HEADER */
 header {
   background: #799851;
-  padding: 1rem;
+  padding: 1rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -77,6 +77,8 @@ header {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  margin-left: auto;
+
 }
 
 .hamburger span {
