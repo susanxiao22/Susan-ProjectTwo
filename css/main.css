@@ -41,8 +41,7 @@ header {
   font-weight: bold; 
   margin-top: -30px;
   margin-bottom: 10px;
-  color: #799851;
-  text-shadow: 2px 3px #ead98f;
+  color: #ead98f;
 }
 
 /* NAV BUTTON STYLE */
@@ -125,7 +124,7 @@ p {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.614); /* adjust darkness here */
+  background: rgba(0, 0, 0, 0.667); /* adjust darkness here */
   z-index: 1;
 }
 
@@ -142,8 +141,7 @@ p {
 
 .herohead {
   font-size: 4.5rem; 
-  color: #799851;
-  text-shadow: 5px 5px #ead98f; 
+  color: #ead98f;
   position: center; 
 }
 
