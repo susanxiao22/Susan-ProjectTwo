@@ -142,6 +142,7 @@ p {
 .herohead {
   font-size: 4.5rem; 
   color: #c2ef7a;
+  position: center; 
 }
 
 .cta-btn {
