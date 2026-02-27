@@ -255,21 +255,21 @@ lang="en">
   </section>
 </main>
 
-  <div id="successModal" class="modal">
+  <div id="successModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="successTitle" tabindex="-1">
     <div class="modal-content">
-      <span class="close-btn" onclick="closeSuccessModal()">&times;</span>
-      <h3 class="third-heading">Thank You for Subscribing!</h3>
+      <span class="close-btn" onclick="closeSuccessModal()" tabindex="0" role="button" aria-label="Close dialog">&times;</span>
+      <h3 id="successTitle" class="third-heading">Thank You for Subscribing!</h3>
       <p>Welcome to The Willow Patch. Your plant journey begins now!</p>
     </div>
-  </div>
+  </div>  
 
-  <div id="itemModal" class="modal">
-    <div class="modal-content">
-      <span class="close-btn" onclick="closeModal()">&times;</span>
-      <h3 id="modalTitle"></h3>
-      <p id="modalDescription"></p>
-    </div>
+  <div id="itemModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" tabindex="-1">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal()" tabindex="0" role="button" aria-label="Close dialog">&times;</span>
+    <h3 id="modalTitle"></h3>
+    <p id="modalDescription"></p>
   </div>
+</div>
 
   <footer class="footer">
     <h3 class="foot">The Willow Patch Starter Kit</h3>

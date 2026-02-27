@@ -1,5 +1,8 @@
 // JS scripts placed here
 // Hamburger Toggle
+
+let lastFocusedElement = null;
+
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("navLinks");
 
@@ -35,30 +38,34 @@ function openModal(type) {
   const title = document.getElementById("modalTitle");
   const desc = document.getElementById("modalDescription");
 
+  trapFocus(modal);
+  
+  lastFocusedElement = document.activeElement;
+
   const content = {
     plant: {
       title: "Starter Plant",
-      text: "A healthy beginner-friendly plant selected for easy growth and success. It comes in a simple packet made easy to tear and includes about ten pellets of seed for an abundance of vegetation."
+      text: "A healthy beginner-friendly plant selected for easy growth and success..."
     },
     soil: {
       title: "Premium Soil Mix",
-      text: "Nutrient-rich, well-draining soil designed to support strong root development. It is about fifteen pounds of premium, professionally blended soil formulated to give plants the ideal balance of moisture retention and aeration. Perfect for indoor and outdoor container plants, raised beds, or transplanting young seedlings."
+      text: "Nutrient-rich, well-draining soil designed to support strong root development..."
     },
     food: {
       title: "Organic Plant Food",
-      text: "All-natural fertilizer that boosts plant growth without harmful chemicals. Made from organic, sustainably sourced ingredients, it delivers essential nutrients like nitrogen, phosphorus, and potassium in a slow-release form that feeds plants steadily over time."
+      text: "All-natural fertilizer that boosts plant growth without harmful chemicals..."
     },
     guide: {
       title: "Detailed Care Guide",
-      text: "Step-by-step instructions to help you care for your plant with confidence. You will also find practical tips for pruning, repotting, and recognizing early signs of stress or nutrient deficiencies—so you can address small issues before they become bigger problems."
+      text: "Step-by-step instructions to help you care for your plant..."
     },
     reminder: {
       title: "Reminder Schedule",
-      text: "A simple watering and maintenance tracker to keep your plant thriving, designed to help you stay consistent and organized with your care routine. This easy-to-use system allows you to log watering dates, fertilizing schedules, pruning sessions, and any notable changes in your plant’s appearance."
+      text: "A simple watering and maintenance tracker..."
     },
     bonus: {
       title: "Surprise Bonus Item",
-      text: "A fun seasonal gardening surprise included just for you, thoughtfully selected to add a little extra joy to your growing experience. Each surprise is inspired by the time of year, whether it’s a packet of specialty seeds, a limited-edition plant marker, a small gardening accessory, or a bonus gardening tool tailored to the season."
+      text: "A fun seasonal gardening surprise included just for you..."
     }
   };
 
@@ -66,19 +73,18 @@ function openModal(type) {
   desc.textContent = content[type].text;
 
   modal.style.display = "flex";
+
+  // Move focus into modal
+  modal.focus();
 }
 
 function closeModal() {
-  document.getElementById("itemModal").style.display = "none";
-}
+  const modal = document.getElementById("itemModal");
+  modal.style.display = "none";
 
-function deleteTask(button) {
-  const li = button.parentElement;
-  li.classList.add("fade-out");
-
-  setTimeout(() => {
-    li.remove();
-  }, 300); // matches CSS animation time
+  if (lastFocusedElement) {
+    lastFocusedElement.focus();
+  }
 }
 
 function toggleStrike(checkbox) {
@@ -125,7 +131,11 @@ form.addEventListener("submit", function(e) {
 });
 
 function closeSuccessModal() {
-    successModal.style.display = "none";
+  successModal.style.display = "none";
+
+  if (lastFocusedElement) {
+    lastFocusedElement.focus();
+  }
 }
 
 // Optional: close modal when clicking outside of it
@@ -194,3 +204,36 @@ window.addEventListener('keydown', (e) => {
         closeSuccessModal();
     }
 });
+
+document.querySelectorAll('.close-btn').forEach(btn => {
+  btn.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      btn.click();
+    }
+  });
+});
+
+function trapFocus(modal) {
+  const focusableElements = modal.querySelectorAll(
+    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+  );
+
+  const firstElement = focusableElements[0];
+  const lastElement = focusableElements[focusableElements.length - 1];
+
+  modal.addEventListener('keydown', function (e) {
+    if (e.key === 'Tab') {
+      if (e.shiftKey) {
+        if (document.activeElement === firstElement) {
+          e.preventDefault();
+          lastElement.focus();
+        }
+      } else {
+        if (document.activeElement === lastElement) {
+          e.preventDefault();
+          firstElement.focus();
+        }
+      }
+    }
+  });
+}
