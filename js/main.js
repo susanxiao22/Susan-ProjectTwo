@@ -39,7 +39,7 @@ function openModal(type) {
   const desc = document.getElementById("modalDescription");
 
   trapFocus(modal);
-  
+
   lastFocusedElement = document.activeElement;
 
   const content = {
@@ -180,9 +180,6 @@ galleryImages.forEach(img => {
 });
 
 // Close modal (existing function)
-function closeModal() {
-  galleryModal.style.display = "none";
-}
 
 // Allow "Enter" key to trigger clicks on focusable elements
 document.querySelectorAll('.box-card, .gallery-track img').forEach(item => {
@@ -236,4 +233,13 @@ function trapFocus(modal) {
       }
     }
   });
+}
+
+function deleteTask(button) {
+  const li = button.closest("li");
+  li.classList.add("fade-out");
+
+  setTimeout(() => {
+    li.remove();
+  }, 300);
 }
