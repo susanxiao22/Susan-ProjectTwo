@@ -189,17 +189,10 @@ p {
   align-items: center;
   padding: 3rem 1rem;
   gap: 3rem;
+  width: 100%;
 }
 
 /* HORIZONTAL SCROLL GALLERY */
-.plant-gallery {
-  flex: 1;
-  max-width: 600px;
-  overflow-x: auto;
-  overflow-y: hidden;
-  scroll-behavior: smooth;
-  border-radius: 10px;
-}
 
 /* Hide scrollbar (optional clean look) */
 .plant-gallery::-webkit-scrollbar {
@@ -424,11 +417,6 @@ footer {
 }
 
 /* MISSION FADE-IN */
-.mission-section {
-  opacity: 0;
-  transform: translateY(60px);
-  transition: opacity 1s ease, transform 1s ease;
-}
 
 .mission-section.show {
   opacity: 1;
@@ -467,18 +455,7 @@ footer {
 }
 
 /* MISSION SECTION */
-.mission-section {
-  background: #ece69d;
-  border-top-left-radius: 40px;
-  border-top-right-radius: 40px;
-  padding: 4rem 2rem;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  margin-top: 60px; 
-  margin-left: 40px;
-  margin-right: 40px;
-}
+
 
 .mission-content {
   max-width: 800px;
@@ -497,8 +474,9 @@ footer {
 
 /* Keep gallery title fixed above scrolling images */
 .plant-gallery {
-  position: relative; /* keeps title positioned inside gallery box */
-  max-width: 500px;
+  position: relative;   /* keeps gallery-title working */
+  width: 100%;
+  max-width: 600px;
   overflow-x: auto;
   overflow-y: hidden;
   scroll-behavior: smooth;
@@ -517,16 +495,6 @@ footer {
   margin-bottom: 20px; 
 }
 
-/* MISSION SECTION */
-.mission-section {
-  background: #ece69d;
-  border-top-left-radius: 40px;
-  border-top-right-radius: 40px;
-  padding: 4rem 2rem;
-  text-align: center;
-  margin: 60px 40px 0 40px;
-  display: block; /* remove flex to prevent side-by-side layout */
-}
 
 /* Mission content stacks vertically and centers everything */
 .mission-content {
@@ -563,4 +531,36 @@ footer {
 .mission-social a img:hover {
   transform: scale(1.2);
   filter: brightness(1.2);
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* MISSION SECTION */
+.mission-section {
+  background: #ece69d;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  padding: 4rem 1.5rem;
+  margin: 60px auto 0 auto;
+  width: 95%;
+  max-width: 1100px;
+  text-align: center;
+}
+
+.mission-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.mission-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.mission-content p {
+  margin-bottom: 1.2rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
 }
