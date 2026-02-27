@@ -194,11 +194,11 @@ p {
 /* HORIZONTAL SCROLL GALLERY */
 .plant-gallery {
   flex: 1;
-  max-width: 500px;
+  max-width: 600px;
   overflow-x: auto;
   overflow-y: hidden;
   scroll-behavior: smooth;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 /* Hide scrollbar (optional clean look) */
