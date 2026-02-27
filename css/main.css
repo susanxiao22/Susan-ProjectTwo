@@ -70,9 +70,13 @@ header {
 
 }
 
-.nav-links a:hover {
+/* Adding :focus ensures keyboard users see the same effect as mouse users */
+.nav-links a:hover, 
+.nav-links a:focus {
   background: #243c2c;
   transform: translateY(-2px);
+  outline: 3px solid #F48E3A; /* Add a visible outline for clarity */
+  outline-offset: 4px;
 }
 
 /* HAMBURGER */
@@ -188,8 +192,11 @@ p {
   transition: 0.3s;
 }
 
-.box-card:hover {
+.box-card:hover,
+.box-card:focus {
   transform: translateY(-5px);
+  outline: 3px solid #243c2c;
+  background: #ffcc80; /* Slightly lighter to show it's selected */
 }
 
 /* REMINDER LAYOUT */
@@ -228,8 +235,17 @@ p {
   transition: transform 0.3s ease;
 }
 
-.gallery-track img:hover {
+.gallery-track img:hover,
+.gallery-item:focus img {
   transform: scale(1.05);
+  border: 2px solid #F48E3A;
+}
+
+.gallery-item {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
 }
 
 .reminder-image img {

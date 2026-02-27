@@ -173,3 +173,24 @@ galleryImages.forEach(img => {
 function closeModal() {
   galleryModal.style.display = "none";
 }
+
+// Allow "Enter" key to trigger clicks on focusable elements
+document.querySelectorAll('.box-card, .gallery-track img').forEach(item => {
+    // Make sure they can be tabbed to
+    if(!item.hasAttribute('tabindex')) {
+        item.setAttribute('tabindex', '0');
+    }
+
+    item.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            item.click(); // Triggers the existing onclick or addEventListener
+        }
+    });
+});
+
+window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeModal();
+        closeSuccessModal();
+    }
+});
