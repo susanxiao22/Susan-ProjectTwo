@@ -515,3 +515,38 @@ footer {
   background: #f7f4d5;   /* match gallery background for better readability */
   margin-bottom: 20px; 
 }
+
+.social-section {
+  background: #ffffff;
+  border: 2px solid #F48E3A;
+  border-radius: 15px;
+  padding: 1rem;
+  max-width: 200px;
+  text-align: center;
+  margin-top: 1rem;
+  flex-shrink: 0;
+}
+
+.social-section h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  color: #243c2c;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #F48E3A;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  color: #e86e0a;
+  transform: translateX(3px);
+}
