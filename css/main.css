@@ -41,7 +41,8 @@ header {
   font-weight: bold; 
   margin-top: -30px;
   margin-bottom: 10px;
-  color: #c2ef7a;
+  color: #ffffff;
+  text-shadow: 2px 3px #ba6815;
 }
 
 /* NAV BUTTON STYLE */
@@ -141,7 +142,8 @@ p {
 
 .herohead {
   font-size: 4.5rem; 
-  color: #c2ef7a;
+  color: #ffffff;
+  text-shadow: 5px 5px #ba6815; 
   position: center; 
 }
 
@@ -159,7 +161,7 @@ p {
 }
 
 .cta-btn:hover {
-  background: #d97726;
+  background: #ad4d03;
   transform: translateY(-3px);
 }
 
@@ -261,7 +263,7 @@ p {
 
 .todo-container button {
   padding: 0.5rem 1rem;
-  background: #799851;
+  background: #243c2c;
   color: #ffffff;
   border: none;
   border-radius: 8px;
@@ -337,6 +339,7 @@ input:invalid {
 
 .submit-btn:hover {
   transform: translateY(-3px);
+  background: #ad4d03;
 }
 
 /* FOOTER */
