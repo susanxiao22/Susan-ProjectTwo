@@ -37,8 +37,10 @@ header {
 }
 
 .lineone {
-  font-size: 1.5rem; 
+  font-size: 2rem; 
   font-weight: bold; 
+  margin-top: -30px;
+  margin-bottom: 10px;
 }
 
 /* NAV BUTTON STYLE */
@@ -137,7 +139,7 @@ p {
 }
 
 .herohead {
-  font-size: 3rem; 
+  font-size: 4.5rem; 
 }
 
 .cta-btn {
