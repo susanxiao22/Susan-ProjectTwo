@@ -1,4 +1,3 @@
-/* Place CSS styles here */
 * {
   margin: 0;
   padding: 0;
@@ -6,14 +5,7 @@
 }
 
 html {
-  scroll-behavior: smooth; 
-}
-
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background: #f7f4d5;
-  margin: 0;
-  color: #243c2c;
+  scroll-behavior: smooth;
 }
 
 html, body {
@@ -21,14 +13,24 @@ html, body {
   overflow-x: hidden;
 }
 
-/* HEADER */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f7f4d5;
+  margin: 0;
+  color: #243c2c;
+  overflow-x: hidden;
+}
+
+p {
+  font-family: "Gamja Flower", sans-serif;
+}
+
 header {
   background: #799851;
   padding: 1rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -41,15 +43,6 @@ header {
   font-family: "Rubik Iso", system-ui;
 }
 
-.lineone {
-  font-size: 2rem; 
-  font-weight: bold; 
-  margin-top: -30px;
-  margin-bottom: 10px;
-  color: #ead98f;
-}
-
-/* NAV BUTTON STYLE */
 .nav-links {
   list-style: none;
   position: absolute;
@@ -61,30 +54,27 @@ header {
   display: none;
   flex-direction: column;
   gap: 1.8rem;
-  font-size: 14pt; 
+  font-size: 14pt;
   font-weight: bold;
 }
 
 .nav-links a {
   text-decoration: none;
   padding: 0.6rem 1rem;
-  border: 2px solid rgb(255, 255, 255);
+  border: 2px solid #ffffff;
   border-radius: 30px;
   color: #ffffff;
   transition: 0.3s;
-
 }
 
-/* Adding :focus ensures keyboard users see the same effect as mouse users */
-.nav-links a:hover, 
+.nav-links a:hover,
 .nav-links a:focus {
   background: #243c2c;
   transform: translateY(-2px);
-  outline: 3px solid #F48E3A; /* Add a visible outline for clarity */
+  outline: 3px solid #F48E3A;
   outline-offset: 4px;
 }
 
-/* HAMBURGER */
 .hamburger {
   cursor: pointer;
   display: flex;
@@ -108,32 +98,22 @@ header {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-p {
-    font-family: "Gamja Flower", sans-serif;
-}
-
-.todo-section span{
-    font-family: "Gamja Flower", sans-serif;
-}
-
-/* HERO */
 .hero {
   position: relative;
   background-image: url("../img/PlantsHero.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
   text-align: center;
   padding: 6rem 2rem;
-  color: rgb(255, 255, 255);
+  color: #ffffff;
 }
 
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.667); /* adjust darkness here */
+  background: #000000aa;
   z-index: 1;
 }
 
@@ -149,9 +129,17 @@ p {
 }
 
 .herohead {
-  font-size: 4.5rem; 
+  font-size: 4.5rem;
   color: #ead98f;
-  position: center; 
+  position: center;
+}
+
+.lineone {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: -30px;
+  margin-bottom: 10px;
+  color: #ead98f;
 }
 
 .cta-btn {
@@ -164,7 +152,7 @@ p {
   text-decoration: none;
   transition: 0.3s;
   font-size: 20pt;
-  font-weight: bold; 
+  font-weight: bold;
 }
 
 .cta-btn:hover {
@@ -173,12 +161,71 @@ p {
 }
 
 .cta-btn:active {
-  background: #b85c1c;   /* darker orange when pressed */
+  background: #b85c1c;
   transform: scale(0.97);
-  color: #ffffff;        /* keeps text readable */
+  color: #ffffff;
 }
 
-/* BOX */
+.mission-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+
+  background: #ece69d;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  padding: 4rem 1.5rem;
+  margin: 60px auto 0 auto;
+  width: 95%;
+  max-width: 1100px;
+  text-align: center;
+}
+
+.mission-section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mission-content {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.mission-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.mission-content p {
+  margin-bottom: 1.2rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* SOCIAL ICONS */
+.mission-social {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.mission-social a img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.mission-social a img:hover {
+  transform: scale(1.2);
+  filter: brightness(1.2);
+}
+
 .box-section {
   padding: 3rem 2rem;
   text-align: center;
@@ -201,10 +248,9 @@ p {
 .box-card:focus {
   transform: translateY(-5px);
   outline: 3px solid #243c2c;
-  background: #ffcc80; /* Slightly lighter to show it's selected */
+  background: #ffcc80;
 }
 
-/* REMINDER LAYOUT */
 .reminder-layout {
   display: flex;
   flex-direction: column;
@@ -214,9 +260,16 @@ p {
   width: 100%;
 }
 
-/* HORIZONTAL SCROLL GALLERY */
+.plant-gallery {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  border-radius: 10px;
+}
 
-/* Hide scrollbar (optional clean look) */
 .plant-gallery::-webkit-scrollbar {
   height: 8px;
 }
@@ -224,6 +277,18 @@ p {
 .plant-gallery::-webkit-scrollbar-thumb {
   background: #F48E3A;
   border-radius: 10px;
+}
+
+.gallery-title {
+  position: sticky;
+  top: 0.5rem;
+  left: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #243c2c;
+  z-index: 5;
+  background: #f7f4d5;
+  margin-bottom: 20px;
 }
 
 .gallery-track {
@@ -240,24 +305,23 @@ p {
   transition: transform 0.3s ease;
 }
 
+.gallery-item {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
 .gallery-track img:hover,
 .gallery-item:focus img {
   transform: scale(1.05);
   border: 2px solid #F48E3A;
 }
 
-.gallery-item {
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-}
-
 .reminder-image img {
   max-width: 300px;
 }
 
-/* CHECKLIST CARD */
 .todo-section {
   background: #ffffff;
   padding: 1.5rem;
@@ -265,6 +329,10 @@ p {
   flex: 1;
   max-width: 350px;
   box-shadow: 0 8px 20px #0000001a;
+}
+
+.todo-section span {
+  font-family: "Gamja Flower", sans-serif;
 }
 
 .todo-container {
@@ -287,8 +355,8 @@ p {
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  font-weight: bold; 
-  font-size: 18px;
+  font-weight: bold;
+  font-size: 16px;
 }
 
 #taskList {
@@ -298,13 +366,38 @@ p {
 
 #taskList li {
   margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #taskList input[type="checkbox"] {
-  accent-color: #F48E3A; /* modern checkbox color */
+  accent-color: #F48E3A;
 }
 
-/* SUBSCRIPTION */
+#taskList span {
+  transition: all 0.3s ease;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.delete-btn {
+  background: transparent;
+  border: none;
+  color: #a60303;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.fade-out {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: all 0.3s ease;
+}
+
 .contact {
   padding: 4rem 1rem;
   display: flex;
@@ -345,98 +438,20 @@ input:invalid {
 .submit-btn {
   padding: 0.9rem;
   background: #e86e0a;
-  color: white;
+  color: #ffffff;
   border: none;
   border-radius: 30px;
   cursor: pointer;
   transition: 0.3s;
   font-weight: bold;
-  font-size: 1.3rem; 
+  font-size: 1.3rem;
 }
-
-
 
 .submit-btn:hover {
   transform: translateY(-3px);
   background: #ad4d03;
 }
 
-/* FOOTER */
-footer {
-  background: #7a9852;
-  text-align: center;
-  padding: 1rem;
-  color: #ffffff;
-  
-}
-
-.foot { 
-  font-family: "Rubik Iso", system-ui;
-  font-size: 25px; 
-  font-weight: bold; 
-}
-
-/* MOBILE ONLY */
-@media (max-width: 767px) {
-
-  header {
-    padding: 0.8rem;
-  }
-
-  .hero {
-    padding: 4rem 1.5rem;
-  }
-
-  .herohead {
-    font-size: 2.5rem;
-  }
-
-  .lineone {
-    font-size: 1.2rem;
-    margin-top: -10px;
-  }
-
-  .box-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .gallery-track img {
-    height: 180px;
-  }
-
-  .todo-section {
-    max-width: 100%;
-  }
-
-}
-
-/* TABLET+ */
-@media (min-width: 768px) {
-
-  .nav-links {
-    display: flex;
-    position: static;
-    flex-direction: row;
-    background: transparent;
-  }
-
-  .hamburger {
-    display: none;
-  }
-
-  .box-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .reminder-layout {
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-  }
-
-}
-
-/* MODAL */
 .modal {
   display: none;
   position: fixed;
@@ -461,9 +476,9 @@ footer {
   animation: fadeIn 0.3s ease;
 }
 
-.modal-content p{
+.modal-content p {
   font-size: 1.5rem;
-  margin-top: 20px; 
+  margin-top: 20px;
 }
 
 .close-btn {
@@ -475,166 +490,50 @@ footer {
 }
 
 .third-heading {
-  font-size: 1.5rem; 
+  font-size: 1.5rem;
+}
+
+
+footer {
+  background: #7a9852;
+  text-align: center;
+  padding: 1rem;
+  color: #ffffff;
+}
+
+.foot {
+  font-family: "Rubik Iso", system-ui;
+  font-size: 25px;
+  font-weight: bold;
 }
 
 @keyframes fadeIn {
-  from {opacity: 0; transform: scale(0.9);}
-  to {opacity: 1; transform: scale(1);}
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
 }
 
-/* MISSION FADE-IN */
-
-/* MISSION FADE-IN EFFECT */
-.mission-section {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+@media (max-width: 767px) {
+  header { padding: 0.8rem; }
+  .hero { padding: 4rem 1.5rem; }
+  .herohead { font-size: 2.5rem; }
+  .lineone { font-size: 1.2rem; margin-top: -10px; }
+  .box-grid { grid-template-columns: 1fr; }
+  .gallery-track img { height: 180px; }
+  .todo-section { max-width: 100%; }
 }
 
-.mission-section.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-#taskList li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.delete-btn {
-  background: transparent;
-  border: none;
-  color: #a60303;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-/* Smooth Strike Effect */
-#taskList span {
-  transition: all 0.3s ease;
-}
-
-.completed {
-  text-decoration: line-through;
-  opacity: 0.6;
-}
-
-/* Fade Out Animation */
-.fade-out {
-  opacity: 0;
-  transform: translateX(20px);
-  transition: all 0.3s ease;
-}
-
-/* MISSION SECTION */
-
-
-.mission-content {
-  max-width: 800px;
-}
-
-.mission-content h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-}
-
-.mission-content p {
-  margin-bottom: 1.2rem;
-  font-size: 1.2rem;
-  line-height: 1.6;
-}
-
-/* Keep gallery title fixed above scrolling images */
-.plant-gallery {
-  position: relative;   /* keeps gallery-title working */
-  width: 100%;
-  max-width: 600px;
-  overflow-x: auto;
-  overflow-y: hidden;
-  scroll-behavior: smooth;
-  border-radius: 10px;
-}
-
-.gallery-title {
-  position: sticky;      /* <-- key: keeps it in place while scrolling */
-  top: 0.5rem;           /* distance from top of gallery box */
-  left: 0.5rem;          /* optional padding from left */
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #243c2c;
-  z-index: 5;            /* stay above images */
-  background: #f7f4d5;   /* match gallery background for better readability */
-  margin-bottom: 20px; 
-}
-
-
-/* Mission content stacks vertically and centers everything */
-.mission-content {
-  max-width: 800px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;   /* center everything horizontally */
-  text-align: center;    /* center paragraphs */
-}
-
-/* Paragraph styling */
-.mission-content p {
-  margin-bottom: 1.2rem;
-  font-size: 1.2rem;
-  line-height: 1.6;
-}
-
-/* Social icons inside mission section */
-.mission-social {
-  margin-top: 2rem;       /* space below paragraphs */
-  display: flex;
-  justify-content: center; /* center icons horizontally */
-  gap: 1.5rem;
-  flex-wrap: wrap;         /* wrap on smaller screens */
-}
-
-.mission-social a img {
-  width: 40px;
-  height: 40px;
-  transition: transform 0.3s, filter 0.3s;
-}
-
-.mission-social a img:hover {
-  transform: scale(1.2);
-  filter: brightness(1.2);
-}
-
-body {
-  overflow-x: hidden;
-}
-
-/* MISSION SECTION */
-.mission-section {
-  background: #ece69d;
-  border-top-left-radius: 40px;
-  border-top-right-radius: 40px;
-  padding: 4rem 1.5rem;
-  margin: 60px auto 0 auto;
-  width: 95%;
-  max-width: 1100px;
-  text-align: center;
-}
-
-.mission-content {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.mission-content h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-}
-
-.mission-content p {
-  margin-bottom: 1.2rem;
-  font-size: 1.2rem;
-  line-height: 1.6;
+@media (min-width: 768px) {
+  .nav-links {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    background: transparent;
+  }
+  .hamburger { display: none; }
+  .box-grid { grid-template-columns: repeat(3, 1fr); }
+  .reminder-layout {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
 }
