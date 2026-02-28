@@ -376,6 +376,40 @@ footer {
   font-weight: bold; 
 }
 
+/* MOBILE ONLY */
+@media (max-width: 767px) {
+
+  header {
+    padding: 0.8rem;
+  }
+
+  .hero {
+    padding: 4rem 1.5rem;
+  }
+
+  .herohead {
+    font-size: 2.5rem;
+  }
+
+  .lineone {
+    font-size: 1.2rem;
+    margin-top: -10px;
+  }
+
+  .box-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-track img {
+    height: 180px;
+  }
+
+  .todo-section {
+    max-width: 100%;
+  }
+
+}
+
 /* TABLET+ */
 @media (min-width: 768px) {
 
